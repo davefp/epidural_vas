@@ -6,55 +6,12 @@
 </head>
 
 <body>
-	<script type="text/javascript" src="js/wz_dragdrop.js"></script>
-	<!-- wz_dragdrop.js (Dragdrop Bibliothek) is (c) Walter Zorn - see javascript source code for details -->
-	<script type="text/javascript" src="js/ratingscales.js"></script>
-	<!-- ratingscales.js (Ratingscales Addon) is (c) Timo Gnambs - see javascript source code for details -->
-	<!-- "wz_dragdrop.js" and "ratingscale.js" have to be included immediatly after "<body onload='next_page()'>" -->
-	<form id="form" name="vas_data">
-		<p>
-		<table align="center" border="0">
-			<tr>
-				<td align="center">
-					<script type="text/javascript">
-						scales.scale('q1', 'click', 99, ['pics/line20.gif', 499, 10], ['pics/30.gif'], ['Not coping at all', 'Coping completely'], 'Please indicate how you <strong>are currently coping</strong> with your pain (pre-epidural)');
-						scales.scale('q2', 'click', 99, ['pics/line20.gif', 499, 10], ['pics/30.gif'], ['Not coping at all', 'Coping completely'], 'Please indicate how you <strong>would like to be coping</strong> with your pain (pre-epidural)');
-						scales.scale('q3', 'click', 99, ['pics/line20.gif', 499, 10], ['pics/30.gif'], ['Not coping at all', 'Coping completely'], 'Please indicate how you <strong>are currently coping</strong> with your pain (30 minutes post-epidural)');
-						scales.scale('q4', 'click', 99, ['pics/line20.gif', 499, 10], ['pics/30.gif'], ['Less painful than expected', 'More painful than expected'], 'Please indicate whether the insertion of the epidural was less painful or more painful than you expected');
-						scales.scale('q5', 'click', 99, ['pics/line20.gif', 499, 10], ['pics/30.gif'], ['Overall negative effect', 'Overall positive effect'], 'Please indicate whether the epidural had an overall negative or positive effect on your birth experience');
-					</script>
-					<noscript>
-						<p>
-							Javascript required for this page
-						</p>
-					</noscript>
-				</td>
-			</tr>
-			<tr>
-				<td align="center">
-					<input type="submit" value="reveal answers" />
-				</td>
-			</tr>
-		</table>
-		</p>
-	</form>
-	<!-- "<script type="text/javascript">scales.init('value');</script>" has to be immediately before "</body> -->
-	<script type="text/javascript">
-		function displayResults(event) {
-			window.console.log('event handler');
-			event.preventDefault();
-			const results = document.getElementsByClassName('result');
-			console.log(results)
-			for (let element of results) {
-				element.style.visibility = 'visible';
-			}
-			return false;
-		}
-
-		document.getElementById('form').addEventListener("submit", displayResults)
-
-		scales.init('value');
-	</script>
-</body>
-
+  <h1>Epidural VAS Questions</h1>
+  <ul>
+    <li><a href='q1.html'>Question 1</a></li>
+    <li><a href='q2.html'>Question 2</a></li>
+    <li><a href='q3.html'>Question 3</a></li>
+    <li><a href='q4.html'>Question 4</a></li>
+    <li><a href='q5.html'>Question 5</a></li>
+  </ul>
 </html>
