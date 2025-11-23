@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<title>VAS</title>
+</head>
+
+<body>
+	<script type="text/javascript" src="js/wz_dragdrop.js"></script>
+	<!-- wz_dragdrop.js (Dragdrop Bibliothek) is (c) Walter Zorn - see javascript source code for details -->
+	<script type="text/javascript" src="js/ratingscales.js"></script>
+	<!-- ratingscales.js (Ratingscales Addon) is (c) Timo Gnambs - see javascript source code for details -->
+	<!-- "wz_dragdrop.js" and "ratingscale.js" have to be included immediatly after "<body onload='next_page()'>" -->
+	<a href="index.html">back</a>
+	<form id="form" name="vas_data">
+		<p>
+		<table align="center" border="0">
+			<tr>
+				<td align="center">
+					<script type="text/javascript">
+						scales.scale('q3', 'click', 99, ['pics/line20.gif', 499, 10], ['pics/30.gif'], ['Not coping at all', 'Coping completely'], 'Please indicate how you <strong>are currently coping</strong> with your pain (30 minutes post-epidural)');
+					</script>
+					<noscript>
+						<p>
+							Javascript required for this page
+						</p>
+					</noscript>
+				</td>
+			</tr>
+			<tr>
+				<td align="center">
+					<input type="submit" value="reveal answers" />
+				</td>
+			</tr>
+		</table>
+		</p>
+	</form>
+	<!-- "<script type="text/javascript">scales.init('value');</script>" has to be immediately before "</body> -->
+	<script type="text/javascript">
+		function displayResults(event) {
+			window.console.log('event handler');
+			event.preventDefault();
+			const results = document.getElementsByClassName('result');
+			console.log(results)
+			for (let element of results) {
+				if(element.style.visibility == 'visible') {
+					element.style.visibility = 'hidden'
+				} else {
+					element.style.visibility = 'visible';
+				}
+			}
+			return false;
+		}
+
+		document.getElementById('form').addEventListener("submit", displayResults)
+
+		scales.init('value');
+	</script>
+</body>
+
+</html>

@@ -203,9 +203,9 @@ function printScale(id) {
     document.writeln('</h2>');
     //print label
     if(this.labels.length >= 2) {
-        document.writeln('<table border="0"><tr><td>');
+        document.writeln('<table border="0"><tr><td><h2>');
         document.writeln(this.labels[0]);
-        document.writeln('</td><td>');
+        document.writeln('</h2></td><td>');
     }
 
     //print scale
@@ -221,9 +221,9 @@ function printScale(id) {
 
     //print label
     if(this.labels.length >= 2) {
-        document.writeln('</td><td>');
+        document.writeln('</td><td><h2>');
         document.writeln(this.labels[1]);
-        document.writeln('</td></tr></table>');
+        document.writeln('</h2></td></tr></table>');
     }
 
     document.writeln('<input type="text" id="' + this.element + '" name="' + this.element + '" value="-9" class="result" style="visibility: hidden" />');
